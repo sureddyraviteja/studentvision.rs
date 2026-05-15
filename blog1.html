@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrepreneurship Tips for Students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            background: #fafafa;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #a3a3a3;
+            margin-top: 16px;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: -30px auto 60px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro-card {
+            background: #ffffff;
+            padding: 50px 40px;
+            border-radius: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            margin-bottom: 40px;
+            border: 1px solid #f0f0f0;
+        }
+
+        .intro-card p {
+            font-size: 1.05rem;
+            color: #525252;
+            line-height: 1.8;
+        }
+
+        .tip-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
+        }
+
+        .tip-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+            color: #ffffff;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 36px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+
+        .tip-card p {
+            color: #525252;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        ul {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding: 12px 0 12px 32px;
+            color: #525252;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        ul li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #2d2d2d;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 240px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            border-radius: 16px;
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a3a3a3;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #e8e8e8;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #a3a3a3;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        footer a:hover {
+            color: #e5e5e5;
+            border-bottom-color: #e5e5e5;
+        }
+
+        .social-links {
+            margin-top: 16px;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 24px 28px;
+            border-radius: 16px;
+            margin: 24px 0;
+            border-left: 3px solid #2d2d2d;
+        }
+
+        @media (max-width: 768px) {
+            .intro-card,
+            .tip-card {
+                padding: 30px 24px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Entrepreneurship Tips for Students</h1>
+    <p class="subtitle">Start Your Journey Today</p>
+</header>
+
+<div class="container">
+    <div class="intro-card">
+        <p>Entrepreneurship is not just about starting a business; it's about developing a mindset that helps you solve problems, take risks, and innovate. As a student, this is the best time to explore entrepreneurship because you have the flexibility to experiment, access to resources, and a learning environment that supports growth. If you're a student dreaming of becoming an entrepreneur, here are some valuable tips to help you get started.</p>
+    </div>
+
+    <div class="tip-card">
+        <span class="tip-number">01</span>
+        <h2>Start Small, Think Big</h2>
+        <p>Many students hesitate to start a business because they think they need a lot of money or a big idea. The truth is, you can start small and scale up later. Think about simple business ideas like:</p>
+        <ul>
+            <li>Selling handmade products</li>
+            <li>Starting a tutoring service</li>
+            <li>Affiliate marketing on social media</li>
+            <li>Drop-shipping or reselling</li>
+        </ul>
+        <p>The key is to start with something manageable and expand as you learn.</p>
+        <div class="image-placeholder">Start Small, Think Big</div>
+    </div>
+
+    <div class="tip-card">
+        <span class="tip-number">02</span>
+        <h2>Identify a Problem & Solve It</h2>
+        <p>Successful businesses are built on solving real problems. Look around you—what issues do students face daily?</p>
+        <ul>
+            <li>Can you create a better way to take notes?</li>
+            <li>Is there a need for a campus food delivery service?</li>
+            <li>Can you build a platform to help students find internships?</li>
+        </ul>
+        <p>Find a problem, come up with a solution, and test it.</p>
+        <div class="image-placeholder">Problem Solving Team</div>
+    </div>
+
+    <div class="tip-card">
+        <span class="tip-number">03</span>
+        <h2>Learn Business Skills Early</h2>
+        <p>Running a business requires more than just a great idea. You need to understand:</p>
+        <ul>
+            <li>Marketing (how to attract customers)</li>
+            <li>Sales (how to convince people to buy)</li>
+            <li>Finance (how to manage money)</li>
+            <li>Networking (how to connect with the right people)</li>
+        </ul>
+        <p>You don't need an MBA—there are free online courses on YouTube, Coursera, and Udemy that can teach you the basics.</p>
+        <div class="image-placeholder">Business Skills Training</div>
+    </div>
+
+    <div class="tip-card">
+        <span class="tip-number">04</span>
+        <h2>Use Social Media to Your Advantage</h2>
+        <p>As a student, you might not have money for big advertisements, but you have something powerful—social media! Platforms like Instagram, YouTube, and LinkedIn can help you:</p>
+        <ul>
+            <li>Build a personal brand</li>
+            <li>Connect with potential customers</li>
+            <li>Learn from other entrepreneurs</li>
+        </ul>
+        <p>Start sharing your journey, post valuable content, and engage with your audience.</p>
+    </div>
+
+    <div class="tip-card">
+        <span class="tip-number">05</span>
+        <h2>Find a Mentor</h2>
+        <p>Having someone to guide you can save you from making costly mistakes. Look for a mentor who has experience in the field you're interested in. They could be:</p>
+        <ul>
+            <li>A professor</li>
+            <li>A senior student with a startup</li>
+            <li>A business owner in your community</li>
+        </ul>
+        <p>Don't be afraid to ask for advice; most successful entrepreneurs love helping young minds.</p>
+    </div>
+
+    <div class="tip-card">
+        <span class="tip-number">06</span>
+        <h2>Learn from Failure</h2>
+        <p>Failure is a part of entrepreneurship. Many successful entrepreneurs failed before they succeeded. Instead of getting discouraged, analyze what went wrong and improve. The faster you fail, the faster you learn.</p>
+        <div class="highlight">
+            <strong>Remember:</strong> Every setback is a setup for a comeback. Embrace failure as your greatest teacher.
+        </div>
+    </div>
+
+    <div class="tip-card">
+        <span class="tip-number">07</span>
+        <h2>Join Startup Incubators & Competitions</h2>
+        <p>Many universities have startup incubators and business competitions that offer funding and mentorship. Participate in these programs to:</p>
+        <ul>
+            <li>Validate your idea</li>
+            <li>Get funding for your startup</li>
+            <li>Network with potential investors</li>
+        </ul>
+        <p>Check if your college has entrepreneurship clubs or events.</p>
+    </div>
+
+    <div class="tip-card">
+        <span class="tip-number">08</span>
+        <h2>Build a Strong Network</h2>
+        <p>Surround yourself with like-minded people. Attend networking events, startup meetups, and online webinars. Your connections can open doors to opportunities you never imagined.</p>
+    </div>
+
+    <div class="tip-card">
+        <span class="tip-number">09</span>
+        <h2>Manage Time Wisely</h2>
+        <p>Balancing studies and a business can be challenging. Create a schedule that prioritizes both your academic responsibilities and entrepreneurial pursuits. Time management is crucial for success in both areas.</p>
+        <div class="highlight">
+            <strong>Pro Tip:</strong> Use productivity tools and techniques like time blocking, the Pomodoro method, or project management apps to stay organized and efficient.
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Ravi Teja</p>
+    <div class="social-links">
+        Follow me on <a href="http://www.youtube.com/@StudentvisionRs">YouTube</a> & <a href="https://www.instagram.com/studentvision.rs?igsh=MThxemMzbzh3aWRheg==">Instagram</a>
+    </div>
+</footer>
+
+</body>
+</html>

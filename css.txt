@@ -1,0 +1,19 @@
+footer {
+    background-color: #1a1d3a;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 30px 20px;
+    font-size: 0.95rem;
+    margin-top: 60px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease-in-out;
+}
+
+footer a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
