@@ -1,79 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudentvisionRs</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudentvisionRs — Ravi Teja</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
-    <header>
-        <h1>Studentvision</h1>
-        <p>Personal Development | Entrepreneurship | Self-Improvement</p>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#showcase">YouTube & Instagram</a></li>
-                <li><a href="#Blogs">Blogs & writings</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">about</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="showcase">
-        <h2>Latest Content</h2>
-        <div class="content-grid">
-            <div class="content">
-                <h3>Latest YouTube Video</h3>
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/8Pqz7zWZYJA" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="content">
-                <h3>Latest Instagram Post</h3>
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DAfrOPTBUZA/" data-instgrm-version="14"></blockquote>
-                <script async src="https://www.instagram.com/embed.js"></script>
-            </div>
-        </div>
-    </section>
-    
-    <section id="Blogs">
-    <h2>Blogs & Writings</h2>
-    <p>Check out my latest blogs:</p>
-    <ul>
-        <li><a href="blog1.html">Entrepreneurship Tips for Students</a></li>
-        <li><a href="blog2.html">xxxxxxxxxxxxxxxxxx</a></li>
-        <li><a href="https://yourwebsite.com/blog3">How to Stay Consistent in Content Creation</a></li>
+  <!-- PROGRESS BAR -->
+  <div id="progress-bar"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">SV<span>Rs</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#content">Content</a></li>
+      <li><a href="#blogs">Blogs</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
-</section>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
 
+  <!-- MOBILE MENU OVERLAY -->
+  <div class="mobile-overlay" id="mobile-overlay">
+    <button class="overlay-close" id="overlay-close" aria-label="Close">&#x2715;</button>
+    <nav class="overlay-nav">
+      <a href="#about" class="overlay-link">About</a>
+      <a href="#services" class="overlay-link">Services</a>
+      <a href="#content" class="overlay-link">Content</a>
+      <a href="#blogs" class="overlay-link">Blogs</a>
+      <a href="#contact" class="overlay-link">Contact</a>
+    </nav>
+    <p class="overlay-tagline">Personal Development &middot; Entrepreneurship &middot; Self-Improvement</p>
+  </div>
 
-    <section id="contact">
-        <h2>Contact & Collaborations</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <img src="your-image.jpg" alt="Ravi Teja" class="profile-img">
-            <div class="about-text">
-                <p>Hi, I'm <strong>Ravi Teja</strong>! I'm a BTech student specializing in **AI Engineering**, and I have a deep passion for **business, entrepreneurship, and marketing**.</p>
-                <p>I create engaging content on **YouTube and Instagram**, where I share insights on personal development, business strategies, and startup growth—helping students and young entrepreneurs turn their ideas into reality.</p>
-                <p>My goal is to inspire and educate **Telugu-speaking students** about financial independence, business skills, and self-growth.</p>
-                <p>Beyond content creation, I also love **photography, cars, and exploring new business opportunities**.</p>
-                <button onclick="subscribe()">Subscribe to My YouTube</button>
-            </div>
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow reveal-up">StudentvisionRs</p>
+      <h1 class="hero-heading reveal-up delay-1">Ravi <em>Teja</em></h1>
+      <p class="hero-sub reveal-up delay-2">
+        BTech AI Engineer &middot; Content Creator &middot; Entrepreneur helping Telugu-speaking students build financial freedom and business acumen.
+      </p>
+      <div class="hero-ctas reveal-up delay-3">
+        <a href="#services" class="btn-primary">View Services</a>
+        <a href="https://youtu.be/zagS6KfQvOc?si=zXpUDSQKNOVYQjnb" target="_blank" class="btn-ghost">Watch on YouTube &#x2197;</a>
+      </div>
+    </div>
+    <div class="hero-deco">
+      <div class="deco-ring"></div>
+      <div class="deco-line-v"></div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="section reveal-section">
+    <div class="section-split">
+      <div class="split-visual">
+        <div class="about-card">
+          <div class="about-initials">RT</div>
+          <div class="about-deco-border"></div>
         </div>
-    </section>
-<footer>
-    <p>© 2025 Ravi Teja | Follow me on <a href="http://www.youtube.com/@StudentvisionRs">YouTube</a> & <a href="https://www.instagram.com/studentvision.rs?igsh=MThxemMzbzh3aWRheg==">Instagram</a></p>
-</footer>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Years Creating</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">10K+</span>
+            <span class="stat-label">Students Reached</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">50+</span>
+            <span class="stat-label">Videos Published</span>
+          </div>
+        </div>
+      </div>
+      <div class="split-content">
+        <p class="section-label">About Me</p>
+        <h2 class="section-title">Building the <em>next generation</em> of entrepreneurs</h2>
+        <p class="body-text">Hi, I'm <strong>Ravi Teja</strong> &mdash; a BTech student specialising in AI Engineering with a deep passion for business, entrepreneurship, and marketing.</p>
+        <p class="body-text">I create content on YouTube and Instagram sharing insights on personal development, business strategies, and startup growth &mdash; helping students turn ideas into reality.</p>
+        <p class="body-text">Beyond content, I offer professional services in digital marketing, video editing, and market research. Outside work I love photography, cars, and exploring new business opportunities.</p>
+        <div class="about-tags">
+          <span class="tag">AI Engineering</span>
+          <span class="tag">Entrepreneurship</span>
+          <span class="tag">Photography</span>
+          <span class="tag">Marketing</span>
+          <span class="tag">Telugu Content</span>
+        </div>
+        <a href="#contact" class="btn-primary" style="margin-top:2.5rem;display:inline-block;">Work With Me</a>
+      </div>
+    </div>
+  </section>
 
+  <div class="divider-wrap"><hr class="divider" /></div>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services" class="section reveal-section">
+    <div class="section-header centered">
+      <p class="section-label">What I Offer</p>
+      <h2 class="section-title">Services <em>tailored</em> for your growth</h2>
+      <p class="section-sub">Professional services designed to help brands, creators, and businesses grow with clarity and purpose.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-top">
+          <span class="service-num">01</span>
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+        </div>
+        <h3 class="service-name">Digital Marketing</h3>
+        <p class="service-desc">Strategic growth across social platforms — content planning, audience building, and brand storytelling that converts followers into community.</p>
+        <ul class="service-list">
+          <li>Social media strategy</li>
+          <li>Content calendar planning</li>
+          <li>Brand identity &amp; voice</li>
+          <li>Growth analytics</li>
+        </ul>
+        <a href="#contact" class="service-link">Enquire &rarr;</a>
+      </div>
+
+      <div class="service-card featured">
+        <span class="featured-badge">Most Requested</span>
+        <div class="service-top">
+          <span class="service-num">02</span>
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+        </div>
+        <h3 class="service-name">Video Editing</h3>
+        <p class="service-desc">Cinematic cuts, motion graphics, and colour grading — turning raw footage into polished content that keeps viewers hooked from first second.</p>
+        <ul class="service-list">
+          <li>YouTube &amp; Reels editing</li>
+          <li>Motion graphics &amp; titles</li>
+          <li>Colour grading</li>
+          <li>Thumbnail design</li>
+        </ul>
+        <a href="#contact" class="service-link">Enquire &rarr;</a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-top">
+          <span class="service-num">03</span>
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+        </div>
+        <h3 class="service-name">Market Research</h3>
+        <p class="service-desc">Data-driven insights into your market, competitors, and customers — giving you the clarity to make bold, informed strategic decisions.</p>
+        <ul class="service-list">
+          <li>Competitor analysis</li>
+          <li>Audience &amp; niche research</li>
+          <li>Trend identification</li>
+          <li>Business opportunity scouting</li>
+        </ul>
+        <a href="#contact" class="service-link">Enquire &rarr;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider-wrap"><hr class="divider" /></div>
+
+  <!-- ===================== CONTENT ===================== -->
+  <section id="content" class="section reveal-section">
+    <div class="section-header centered">
+      <p class="section-label">Latest Content</p>
+      <h2 class="section-title">Watch &middot; <em>Follow</em> &middot; Engage</h2>
+      <p class="section-sub">Insights on personal development, entrepreneurship, and building a life you are proud of &mdash; in Telugu &amp; English.</p>
+    </div>
+    <div class="content-grid">
+
+      <div class="content-card">
+        <div class="card-platform">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          YouTube
+        </div>
+        <div class="video-wrap">
+          <iframe src="https://youtu.be/zagS6KfQvOc?si=zXpUDSQKNOVYQjnb" frameborder="0" allowfullscreen loading="lazy" title="Latest YouTube Video"></iframe>
+        </div>
+        <div class="card-footer">
+          <p class="card-desc">Watch my latest video on entrepreneurship and personal growth.</p>
+          <a href="https://youtube.com/@StudentvisionRs" target="_blank" class="card-link">Visit Channel &rarr;</a>
+        </div>
+      </div>
+
+      <div class="content-card">
+        <div class="card-platform">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          Instagram
+        </div>
+        <div class="insta-wrap">
+          <blockquote class="instagram-media"
+            data-instgrm-permalink="https://www.instagram.com/p/DAfrOPTBUZA/"
+            data-instgrm-version="14"
+            style="width:100%;margin:0;border:0;">
+          </blockquote>
+        </div>
+        <div class="card-footer">
+          <p class="card-desc">Daily inspiration on business, mindset, and student life.</p>
+          <a href="https://www.instagram.com/studentvision.rs" target="_blank" class="card-link">Visit Profile &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider-wrap"><hr class="divider" /></div>
+
+  <!-- ===================== BLOGS ===================== -->
+  <section id="blogs" class="section reveal-section">
+    <div class="blogs-layout">
+      <div class="blogs-left">
+        <p class="section-label">Blogs &amp; Writings</p>
+        <h2 class="section-title">Ideas worth <em>reading</em></h2>
+        <p class="section-sub">Long-form essays on entrepreneurship, mindset, and practical business strategies for the student generation.</p>
+        <a href="#contact" class="btn-primary" style="margin-top:2.5rem;display:inline-block;">Suggest a Topic</a>
+      </div>
+      <div class="blogs-list">
+        <a href="blog1.html" class="blog-row">
+          <span class="blog-num">01</span>
+          <div class="blog-info">
+            <h3 class="blog-title">Entrepreneurship Tips for Students</h3>
+            <p class="blog-meta">Personal Development &middot; 8 min read</p>
+          </div>
+          <span class="blog-arrow">&rarr;</span>
+        </a>
+        <a href="blog2.html" class="blog-row">
+          <span class="blog-num">02</span>
+          <div class="blog-info">
+            <h3 class="blog-title">How to Build Your First Online Business</h3>
+            <p class="blog-meta">Entrepreneurship &middot; 6 min read</p>
+          </div>
+          <span class="blog-arrow">&rarr;</span>
+        </a>
+        <a href="blog3.html" class="blog-row">
+          <span class="blog-num">03</span>
+          <div class="blog-info">
+            <h3 class="blog-title">Staying Consistent in Content Creation</h3>
+            <p class="blog-meta">Content Strategy &middot; 5 min read</p>
+          </div>
+          <span class="blog-arrow">&rarr;</span>
+        </a>
+        <a href="blog4.html" class="blog-row">
+          <span class="blog-num">04</span>
+          <div class="blog-info">
+            <h3 class="blog-title">Financial Independence Before 25</h3>
+            <p class="blog-meta">Finance &middot; 7 min read</p>
+          </div>
+          <span class="blog-arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-wrap"><hr class="divider" /></div>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="section reveal-section">
+    <div class="contact-layout">
+      <div class="contact-left">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Let's <em>create</em><br>something great</h2>
+        <p class="section-sub">Open to collaborations, service enquiries, speaking opportunities, and conversations about business and growth.</p>
+        <div class="social-links">
+          <a href="https://youtube.com/@ravitejabuilds?si=gdnLfAg5S8246tNl" target="_blank" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            YouTube Channel
+          </a>
+          <a href="https://www.instagram.com/studentvision04?igsh=MThxemMzbzh3aWRheg==" target="_blank" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            Instagram Profile
+          </a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Ravi Kumar" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="hello@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interest</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option value="marketing">Digital Marketing</option>
+              <option value="editing">Video Editing</option>
+              <option value="research">Market Research</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <a href="#hero" class="footer-logo">StudentvisionRs</a>
+        <p class="footer-tagline">Personal Development &middot; Entrepreneurship &middot; Self-Improvement</p>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col-head">Navigate</p>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#content">Content</a>
+          <a href="#blogs">Blogs</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-head">Services</p>
+          <a href="#services">Digital Marketing</a>
+          <a href="#services">Video Editing</a>
+          <a href="#services">Market Research</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-head">Social</p>
+          <a href="https://youtube.com/@ravitejabuilds?si=gdnLfAg5S8246tNl" target="_blank">YouTube &#x2197;</a>
+          <a href="https://www.instagram.com/studentvision04?igsh=MThxemMzbzh3aWRheg==" target="_blank">Instagram &#x2197;</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p id="footer-copy"></p>
+        <a href="#hero" class="back-top">&#x2191; Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script async src="https://www.instagram.com/embed.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
